@@ -22,14 +22,14 @@ public class StudentController {
 StudentService stdservice;
     @PostMapping("/add-student")
     public ResponseEntity<String> addStudent(@RequestBody Student student){
-        System.out.println(student);
+        //System.out.println(student);
         stdservice.addStudent(student);
         return new ResponseEntity<>("New student added successfully", HttpStatus.CREATED);
     }
 
     @PostMapping("/add-teacher")
     public ResponseEntity<String> addTeacher(@RequestBody Teacher teacher){
-        System.out.println(teacher);
+       // System.out.println(teacher);
         stdservice.addTeacher(teacher);
         return new ResponseEntity<>("New teacher added successfully", HttpStatus.CREATED);
     }

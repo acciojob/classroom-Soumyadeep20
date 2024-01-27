@@ -13,4 +13,8 @@ public class Student {
     {
         return this.name;
     }
+    public int getAge()
+    {
+        return this.age;
+    }
 }
