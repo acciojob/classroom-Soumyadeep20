@@ -25,4 +25,8 @@ public class Teacher {
     {
         return this.age;
     }
+
+    public int getNumberOfStudents() {
+        return numberOfStudents;
+    }
 }
