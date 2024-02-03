@@ -44,11 +44,15 @@ public class StudentRepository {
 
     public void deletTecher(String t) {
         TRepo.remove(t);
+        //List<
+        if(TSP.containsKey(t))
+            TSP.remove(t);
     }
 
     public void deleteAllTeachers() {
         for(String k: TRepo.keySet())
             TRepo.remove(k);
+        TSP=null;
     }
 
     public void addStudentTeacherPair(String s, String t) {

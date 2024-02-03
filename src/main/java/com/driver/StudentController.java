@@ -1,6 +1,8 @@
 package com.driver;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -68,6 +70,7 @@ StudentService stdservice;
     @GetMapping("/get-all-students")
     public ResponseEntity<List<String>> getAllStudents(){
         List<String> students = null; // Assign list of student by calling service layer method
+        
         students=stdservice.getAllStudents();
 
         return new ResponseEntity<>(students, HttpStatus.CREATED);
